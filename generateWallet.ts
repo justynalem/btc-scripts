@@ -13,5 +13,5 @@ const { address } = bitcoin.payments.p2pkh({ pubkey: pubKey });
 writeFileSync('config.json', JSON.stringify({
   address,
   privateKey,
-  publicKey: pubKey.toString('base64')
+  publicKey: '0x' + pubKey.toString('hex')
 }, null, 2));
